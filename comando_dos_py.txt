@@ -1,0 +1,45 @@
+pip install # instala coisas
+
+#ver os pacotes que tenho instalados no meu venv
+venv\Scripts\pip3.7.exe freeze
+
+# escreve num txt todos os pacotes para um txt. Isso pode ser usado, caso eu esteja trabalhando 
+# em equipe
+venv\Scripts\pip3.7.exe freeze > requiriments.txt
+
+# esse reuiriments txt pode ser usado para instalar os pacotes em outro ambiente.
+venv\Scripts\pip3.7.exe install -r requiriments.txt
+
+# instalando o flask-sqlalchemy
+pip install flask-sqlalchemy
+
+
+###################
+
+Comandos manager
+# agora posso dar comandos diretos, apartir do manager.
+# faço coisas na minha aplicação direto da linha de comando
+
+# comando para criar a migração do banco de dados.
+# cria tambem umas pasta onde fica armazenado todas as informações de migrações
+python run.py db init
+
+# commnado migrate. Faz as comparações de tudo que precisa ser modificado no banco de dados
+python run.py db migrate
+
+# comando upgrade para atualizar
+python run.py db upgrade
+
+# toda vez que for feito uma alteração no banco de dados temos que fazer esses comandos acima
+# caso nehuma alteração de estrutua seja feita, podemos ignorar o comando migrate
+
+Quanto mais eu te conheço mais eu fico encantado, com seu jeito, sua sinceridade, sua epontaneidade e mais explicito fica sua 
+beleza interior.
+Como vc é linda. Obrigado por trazer mais cor pros meus dias!
+Espero que nossa amizade perdure por muitos e muitos anos, e à medida em q o tempo vai passando, que a gnt vá amadurencendo 
+o que um pensa do outro!
+E que aconteça como Deus quiser! 
+Se cuida e borme bem !
+Bjo no s2
+
+

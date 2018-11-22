@@ -1,0 +1,91 @@
+# primeira coisa que fiz foi instalar o flask com o comando
+pip install flask
+
+# criei um hello world, utilizando um decorator para a função index.
+
+# eu já tinha o virtualenv instalado no pc, criei um novo ambiente virtual para o projeto, chamado de venv
+#para roda o venv usei o seguinte comando
+venv\Scripts\activate.bat
+# quando entro no venv, meu novo projeto virtual, é como se eu deixasse meu programa rodando 
+# num ambiente a parte da minha manquina local. Com isso meu python fica defualt novamente
+# e nalguns pacotes não estão instalados dentro do venv, como o flask que irei utilizar
+
+#instalando o flask dentro do venv
+C:\_data\python\flask>venv\Scripts\pip3.7.exe install flask
+
+# tudo que eu instalo fica dentro da pasta 
+
+# vou utilizar um modelo de organização mvc
+# que basicamente é divida em tres camadas. Model, View e Controle
+# Model: Parte de banco de dados
+# View : Parte que o usuario  esta vendo, cara da aplicação
+# Controler : Parte lógica.
+
+
+# criando o modelo de organização mvc
+# criei 4 pastas. controllers, models, static e template
+# As pastas static e template formaram a parte view do modelo
+
+# por padrão no flask, todas as partes de htmls, as viwes, se chamam templates e todas as partes de arquivos estaticos se chamam statics
+# o flask já é configurado pra procurar na pasta templates
+
+
+# criando os modulos inits para o projeto
+# o __init__ criado na raiz do projeto é o modulo principal, os outros são sub-modulos
+
+# a partir do momento em que eu criei o modulo __init__ eu aviso que a quela pasta e um app
+
+
+# iniciando no sqlachemy
+# orm, facilita a comunicação com o banco de dados. SQl
+
+# https://flask-migrate.readthedocs.io/en/latest/ # documantação
+# instalar o flask migrate e o flask script
+
+# o manager por padrao ja vem com o comando runserver q vai ser responsavel por rodar a aplicacao
+# deixa o terminal livre para dar comandos
+
+# usando o sqlitman
+
+
+# o banco de dados foi criado, e foi criado tambem uma tabela que se chama alembic version
+# que é responsavel opr fazer a migração do banco de dados
+# ainda nenhuma tabela foi criado
+
+############ configurações
+# criamos um arquivo chamado config para as configurações
+# As configurações serão feitas no formato CINT
+
+
+############ Rotas e paginas
+
+# tamplates
+# utlizando uma classe render template
+# Essa classe recebe um arquivo html e retorna uma string
+
+# O modulo jinja permite que façamos formatações pytohn com html
+
+# usando o modulo bootstrap
+# para facilitar a iserção de botões
+# é preciso add ao html fazendo um link com a tag link
+# heranca de templates
+
+# instalando flaskwtf para trabalhar com formularios
+pip3 install flask-wtf
+#  por ser um manipulação de dados, podemos criar os arquivos dentro de models
+
+# dar uma olhada nos validadores de dados!
+
+#  nmas configurações, no arquivo de configuração, é preciso colocar uma chave de seguranca para que o formulario possa ser chamado!
+
+# criando a pagina de login
+https://getbootstrap.com/docs/3.3/css/#forms
+
+# criar campo de seguranca wtf se nao o formulario nao fica validado!
+
+
+
+ 
+
+
+
