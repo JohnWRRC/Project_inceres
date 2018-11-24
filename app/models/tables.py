@@ -40,10 +40,6 @@ class User(db.Model):
         """
         return "<User %s>"% self.username
     
-    
-		
-    
-
 class Post(db.Model):
     __tablename__="posts"
     id= db.Column(db.Integer, primary_key=True)
@@ -59,8 +55,7 @@ class Post(db.Model):
     #representacao
     def __repr__(self):
         return "< Post %s>"%self.id
-    
-        
+      
 class Follow(db.Model):
     __tablename__="follow"
     id= db.Column(db.Integer, primary_key=True)
