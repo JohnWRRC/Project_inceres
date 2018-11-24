@@ -1,3 +1,7 @@
+# iniciando a virtual env
+http://www.devfuria.com.br/python/virtualenv/
+
+
 # primeira coisa que fiz foi instalar o flask com o comando
 pip install flask
 
@@ -82,6 +86,13 @@ pip3 install flask-wtf
 https://getbootstrap.com/docs/3.3/css/#forms
 
 # criar campo de seguranca wtf se nao o formulario nao fica validado!
+
+# CRUD create read update e delete 
+# trabalhando no banco de dados
+
+
+
+
 
 
 

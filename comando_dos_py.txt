@@ -32,14 +32,7 @@ python run.py db upgrade
 
 # toda vez que for feito uma alteração no banco de dados temos que fazer esses comandos acima
 # caso nehuma alteração de estrutua seja feita, podemos ignorar o comando migrate
-
-Quanto mais eu te conheço mais eu fico encantado, com seu jeito, sua sinceridade, sua epontaneidade e mais explicito fica sua 
-beleza interior.
-Como vc é linda. Obrigado por trazer mais cor pros meus dias!
-Espero que nossa amizade perdure por muitos e muitos anos, e à medida em q o tempo vai passando, que a gnt vá amadurencendo 
-o que um pensa do outro!
-E que aconteça como Deus quiser! 
-Se cuida e borme bem !
-Bjo no s2
+# run venv
+venv\Scripts\dactivate
 
 

@@ -5,13 +5,35 @@
 	<h2>Login</h2>
 	<form action="" method="POST">
 		{{ form.csrf_token}} <!--campo de segunranca-->
+		<div class="form-group">
 			<label>Username</label>
-				{{form.username(class="form-control",
-								placeholder="seu username") }}
-		
+			{{form.username(class="form-control",
+							placeholder="seu username") }}
+								
+			{% if form.errors.username %}
+				<div class="alert alert-danger" role="alert">
+					<ul>
+						{% for e in form.errors.username %}
+							<li>{{ e }}</li>
+						{% endfor %}	
+					</ul>
+				</div>
+						
+			{% endif %}
+		</div>
 		<div class="form-group">
 			<label>Password</label>
 			{{ form.password(class="form-control") }}
+			{% if form.errors.password %}
+				<div class="alert alert-danger" role="alert">
+					<ul>
+						{% for e in form.errors.password %}
+							<li>{{ e }}</li>
+						{% endfor %}	
+					</ul>
+				</div>
+						
+			{% endif %}
 		</div>
 	  
 		<div class="checkbox">

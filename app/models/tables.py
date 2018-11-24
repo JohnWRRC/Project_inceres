@@ -5,14 +5,29 @@ AS tabelas sao declaradas em formato de classes
 """
 class User(db.Model):
     __tablename__="users" # parametro especial. Nome da tabela no banco de dados
-    id= db.Coluum(db.Integer, prymary_key=True)
-    username=db.Colunm(db.String,unique=True) 
-    password=db.Colunm(db.String)
-    name=db.Colunm(db.String)
-    email=db.Colunm(db.String)
+    id= db.Column(db.Integer, primary_key=True)
+    username=db.Column(db.String,unique=True) 
+    password=db.Column(db.String)
+    name=db.Column(db.String)
+    email=db.Column(db.String)
     
     #metodo contrutor
-    def __init__(self, user,password,name,email):
+    @property
+    def is_authenticated(self):
+	
+        return True
+    @property
+    def is_active(self):
+        return True    
+    @property
+    def is_anonymous(self):
+        return True    
+    
+    def get_id(self):
+        return str(self.id)   
+
+   
+    def __init__(self, username,password,name,email):
         self.username=username
         self.password=password
         self.name=name
@@ -23,18 +38,19 @@ class User(db.Model):
         """
         Essa fucao retorna os registros
         """
-        return "<User %>"% self.username
-
+        return "<User %s>"% self.username
+    
+    
+		
+    
 
 class Post(db.Model):
     __tablename__="posts"
-    id= db.Coluum(db.Integer, prymary_key=True)
-    contents=db.Coluum(db.Text)
-    
-    user_id=db.Colunm(db.Integer,db.Foreingkey('users.id')) # campo especial, carrega a chave estrangeira
-    
+    id= db.Column(db.Integer, primary_key=True)
+    contents=db.Column(db.Text)
+    user_id=db.Column(db.Integer,db.ForeignKey('users.id')) # campo especial, carrega a chave estrangeira
     # relationship, tras todas as informacoes do usuario feito na pesquisa
-    user=db.relationship('User',foreing_keys=user_id) # relacionando com a classe User
+    user=db.relationship('User',foreign_keys=user_id) # relacionando com a classe User
     
     def __init__(self,contents,user_id):
         self.contents=-contents
@@ -42,17 +58,17 @@ class Post(db.Model):
     
     #representacao
     def __repr__(self):
-        return "< Post %>"%self.id
+        return "< Post %s>"%self.id
     
         
 class Follow(db.Model):
     __tablename__="follow"
-    id= db.Coluum(db.Integer, prymary_key=True)
-    user_id=db.Colunm(db.Integer,db.Foreingkey('users.id'))
-    follower_id=db.Colunm(db.Integer,db.Foreingkey('users.id'))
+    id= db.Column(db.Integer, primary_key=True)
+    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    follower_id=db.Column(db.Integer,db.ForeignKey('users.id'))
     
-    user=relationship('User', foreing_keys=user_id)
-    follower=relationship('User',foreing_keys=follower_id)
+    user=db.relationship('User', foreign_keys=user_id)
+    follower=db.relationship('User',foreign_keys=follower_id)
     
     
     
